@@ -1,0 +1,421 @@
+/* 
+Project Name: Alison Quin Portfolio Site
+Client: Alison Quin
+Author: Melody
+Developer @melodytran 
+*/
+
+
+/******************************************
+/* SETUP                   
+/*******************************************/
+
+/* Box Model Hack */
+/* {
+     -moz-box-sizing: border-box; /* Firexfox */
+    /* -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     /*box-sizing: border-box; /* IE */
+/*}
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+@font-face {
+    font-family: 'League Gothic';
+    src: url('../fonts/leaguegothic-regular-webfont.eot');
+    src: url('../fonts/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/leaguegothic-regular-webfont.woff') format('woff'),
+         url('../fonts/leaguegothic-regular-webfont.ttf') format('truetype'),
+         url('../fonts/leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'AlexBrushRegular';
+    src: url('../fonts/AlexBrush-Regular-OTF-webfont.eot');
+    src: url('../fonts/AlexBrush-Regular-OTF-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/AlexBrush-Regular-OTF-webfont.woff') format('woff'),
+         url('../fonts/AlexBrush-Regular-OTF-webfont.ttf') format('truetype'),
+         url('../fonts/AlexBrush-Regular-OTF-webfont.svg#AlexBrushRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/******************************************
+/* BASE STYLES                   
+/*******************************************/
+
+body {
+    
+    color: #000;
+    line-height: 1.4;
+    font-family: 'Georgia', serif;
+}
+
+
+header {
+     margin: 20px auto;
+}
+
+footer {
+    clear: both;
+    margin: 20px;
+}
+
+h1 {
+    font-family: 'AlexBrushRegular', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-align: center;
+
+}
+
+h2 {
+    font-family: 'Futura', sans-serif;
+    font-size: 20px;
+    padding: 10px 10px 5px 10px;
+} 
+
+h3 {
+    font-family: 'Futura', sans-serif;
+    font-size: 24px;
+    color: #942F28;
+    text-transform: uppercase;
+    padding: 10px 0px;
+}
+
+h4 {    
+    font-weight: bold;
+    margin: 0px 105px 10px;
+    border-bottom: 1px dotted #ddd;
+    padding-bottom: 15px;
+}
+
+    h4.last {
+        border: none;
+    }
+
+blockquote {
+    width: 600px;
+    padding: 10px 75px;
+    text-align: justify;
+    font-style: italic;
+}
+
+a {
+    text-decoration: none;
+    color: #942F28;
+}
+
+a:hover {
+    color: #000;
+}
+
+
+p {
+     font-family:'League Gothic', Georgia, serif;
+     padding: 10px 0px;
+}
+
+table {
+    width: 565px;
+    text-align: left;
+}
+
+th {
+    width: 149px;
+}
+
+tr {
+    border-bottom: 1px dotted #dddddd;
+}
+
+footer {
+    text-align: center;
+    font-size: 11px;
+    margin-top: 15px;
+}
+
+/******************************************
+/* LAYOUT                   
+/*******************************************/
+
+.home-bg {
+    background: url(../images/photos/Alison-home.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+#wrapper {
+    width: 100%;
+    background-color: rgba(145, 159, 185,0.6);
+    position: absolute;
+    bottom: 0;
+}
+
+#wrapper h1 {
+    color: #942F28;
+    text-shadow: 2px 1px 2px #fff;
+    margin: -30px auto;
+}
+
+#wrapper h2 {
+    color: #942F28;
+    text-shadow: 2px 1px 2px #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+#home-nav {
+    text-align: center;
+}
+
+#home-nav ul li {
+    font-family: 'Futura', sans-serif;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 0px auto;
+}
+
+#home-nav a {
+    display: inline-block;
+    color: #ffffff;
+}
+
+#home-nav a:hover{
+    color: #942F28;
+}
+
+#home-nav a.current {
+    color: #942F28;
+}
+
+#home-nav .first {
+    padding: 0px;
+}
+
+#global-nav {
+    text-align: center;
+}
+
+#global-nav ul li {
+    font-family: 'Futura', sans-serif;
+    font-size: 24px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 0px auto;
+}
+
+#global-nav a {
+    display: inline-block;
+    color: #942F28;
+}
+
+#global-nav a:hover{
+    color: #000;
+}
+
+#global-nav a.current {
+    color: #000;
+}
+
+#global-nav .first {
+    padding: 0px;
+}
+
+.about {
+    width: 900px;
+    margin: 0px auto;
+    padding: 10px;
+}
+
+.about p {
+    text-align: justify;
+}
+
+.about img {
+    width: 900px;
+}
+
+#work {
+    width: 900px;
+    margin: 0px auto;
+    padding: 10px;
+}
+
+.resume {
+    width: 550px;
+    margin: 0px auto 50px;
+    padding: 10px;
+    float: left;
+}
+
+.show-name{
+    padding: 10px;
+}
+
+.resume-photo {
+    width: 310px;
+    float: right;
+    margin: 50px auto;
+}
+
+.resume-photo img {
+    width: 300px;
+    padding: 1px;
+    border: 1px solid #000;
+}
+
+#contact {
+    width: 900px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+#contact h2 {
+    font-family: 'Lucida Grande', Arial, sans-serif;
+    font-size: 24px;
+}
+
+.contact-form {
+    width: 500px;
+    padding: 15px 0px;
+    float: left;
+    border-top: 1px dotted #ccc;
+}
+
+.contact-image{
+    width: 350px;
+    float: right;
+   
+}
+
+.contact-image img {
+    width: 100%;
+    padding: 1px;
+    border: 1px solid #000;
+    margin: -100px auto;
+}
+
+#social {
+    width: 110px;
+    padding: 15px 10px;
+}
+
+#social ul li{
+    width: 48px;
+    float: left;
+
+}
+
+#social ul li a {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    text-indent: -9999em;
+}
+
+#social ul li.twitter {
+    background:url(../images/social/social-sprite.png) -5px -6px; 
+}
+
+#social ul li.twitter:hover {
+    background:url(../images/social/social-sprite.png) -5px -66px; 
+}
+
+#social ul li.facebook {
+    background:url(../images/social/social-sprite.png) -64px -6px; 
+}
+
+
+#social ul li.facebook:hover {
+    background:url(../images/social/social-sprite.png) -64px -66px; 
+}
+
+#photos {
+    width: 900px;
+    margin: 0px auto;
+}
+
+#photos-sub {
+    text-align: right;
+}
+
+#photos-sub ul li {
+    font-family: 'Futura', sans-serif;
+    font-size: 18px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 0px;
+    margin: 0px auto;
+}
+
+#photos-sub a {
+    display: inline-block;
+    color: #000;
+}
+
+#photos-sub a:hover{
+    color: #942F28;
+}
+
+#photos-sub .first {
+    padding: 0px;
+}
+
+.gallery {
+    margin: 20px auto 50px;
+}
+
+.gallery h2 {
+    padding: 15px 0px;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.gallery a{
+    color: #942F28;
+}
+
+.gallery a:hover {
+    opacity: 0.4;
+}
+
+.gallery p{
+    font-family: 'Futura', sans-serif;
+    float: right;
+    padding: 0px 87px;
+}
+
+#headshots {
+    margin: 20px auto;
+}
+
+#photoshoot {
+    margin: 20px auto;
+}
+
+#production {
+    margin: 20px auto;
+}
